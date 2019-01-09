@@ -1,0 +1,11 @@
+bin/
+lib/
+local/
+share/
+app-env
+rarestpupper/ranking/dog_breeds_classification/*
+!rarestpupper/ranking/dog_breeds_classification/
+!rarestpupper/ranking/dog_breeds_classification/src/
+!rarestpupper/ranking/dog_breeds_classification/data/breeds.csv
+!rarestpupper/ranking/dog_breeds_classification/setup/
+**/__pycache__
