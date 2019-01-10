@@ -131,5 +131,5 @@ CELERY_TIMEZONE = 'Canada/Eastern'
 CELERY_BEAT_SCHEDULE = {
     'update_scores_task': {
         'task': 'ranking.tasks.update_scores',
-        'schedule': crontab(minute='*/1'),
+        'schedule': crontab(minute='*/5'),
     },}
