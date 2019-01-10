@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 
-from dog_breeds_classification.src.common import consts
+from ranking.dog_breeds_classification.src.common import consts
 
 
 def denseNNModel(input_node, layers, gamma=0.1):

@@ -3,8 +3,8 @@ import pandas as pd
 import tensorflow as tf
 from sklearn import preprocessing
 
-from dog_breeds_classification.src.common import consts
-from dog_breeds_classification.src.common import paths
+from ranking.dog_breeds_classification.src.common import consts
+from ranking.dog_breeds_classification.src.common import paths
 
 
 def get_int64_feature(example, name):

@@ -3,9 +3,9 @@ import os
 import tensorflow as tf
 from tensorflow.python.tools import freeze_graph
 
-from dog_breeds_classification.src.common import consts
-from dog_breeds_classification.src.models import denseNN
-from dog_breeds_classification.src.common import paths
+from ranking.dog_breeds_classification.src.common import consts
+from ranking.dog_breeds_classification.src.models import denseNN
+from ranking.dog_breeds_classification.src.common import paths
 
 
 def _freeze_graph(graph_path, checkpoint_path, output_node_names, output_path):

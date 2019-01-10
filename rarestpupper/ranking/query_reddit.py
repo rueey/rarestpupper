@@ -1,7 +1,7 @@
 import os, requests, json
 from uuid import uuid4
 import urllib
-from dog_breeds_classification.src.inference.classify import classify
+from ranking.dog_breeds_classification.src.inference.classify import classify
 import math
 
 CLIENT_ID = os.environ["REDDIT_CLIENT_ID"]

@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-from dog_breeds_classification.src.common import consts
-from dog_breeds_classification.src.data_preparation import dataset
-from dog_breeds_classification.src.freezing import freeze
-from dog_breeds_classification.src.common import paths
+from ranking.dog_breeds_classification.src.common import consts
+from ranking.dog_breeds_classification.src.data_preparation import dataset
+from ranking.dog_breeds_classification.src.freezing import freeze
+from ranking.dog_breeds_classification.src.common import paths
 
 
 def infer(model_name, img_raw):
