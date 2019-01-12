@@ -17,4 +17,4 @@ def authenticate_callback(request):
     return HttpResponse("authenticate")
 
 def test(request):
-    return HttpResponse(setup_database())
+    return HttpResponse(len(Pupper.objects.all()))

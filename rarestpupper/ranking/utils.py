@@ -10,7 +10,6 @@ def setup_database():
     list_of_breeds = breeds['breed'].values.tolist()
     for breed in list_of_breeds:
         Pupper(species=breed, update_time=timezone.now()).save()
-    print(len(Pupper.objects.all()))
 
 def save_dog_model(species, score):
     obj, created = Pupper.objects.get_or_create(species=species, defaults={'score': score, 'update_time': timezone.now()})
