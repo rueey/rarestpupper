@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
 from .models import Pupper
+from .utils import check_task_finished, setup_database
 
 # Create your views here.
 
@@ -14,3 +15,6 @@ class LeaderboardView(generic.ListView):
 
 def authenticate_callback(request):
     return HttpResponse("authenticate")
+
+def test(request):
+    return HttpResponse(setup_database())

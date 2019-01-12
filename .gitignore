@@ -12,3 +12,5 @@ rarestpupper/ranking/dog_breeds_classification/data/*
 !rarestpupper/ranking/dog_breeds_classification/setup/
 **/__pycache__
 *.pyc
+rarestpupper/dump.rdb
+rarestpupper/db.sqlite3

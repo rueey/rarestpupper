@@ -1,7 +1,7 @@
 import os, requests, json
 from uuid import uuid4
 import urllib
-from ranking.dog_breeds_classification.src.inference.classify import classify
+from .dog_breeds_classification.src.inference.classify import classify
 import math
 
 CLIENT_ID = os.environ["REDDIT_CLIENT_ID"]
@@ -32,6 +32,8 @@ def get_hottest_posts(access_token):
     if(r.status_code == 401):
         r = requests.get(REDDIT_QUERY_URL, headers=headers, params={"Authorization": get_auth_token()})
     return json.loads(r.text)
+
+'''get_scores_from_parsed_json(parsed_text) returns the scores in a dictionary'''
 
 def get_scores_from_parsed_json(parsed_text):
     ret = {}

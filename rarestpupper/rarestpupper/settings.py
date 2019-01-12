@@ -133,3 +133,4 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'ranking.tasks.update_scores',
         'schedule': crontab(minute='*/5'),
     },}
+CELERY_TRACK_STARTED = True

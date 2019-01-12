@@ -1,0 +1,1 @@
+NUM_DOG_BREEDS = 120

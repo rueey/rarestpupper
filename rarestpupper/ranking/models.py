@@ -7,3 +7,6 @@ class Pupper(models.Model):
     score = models.IntegerField(default=0)
     aggregate_score = models.IntegerField(default=0)
     update_time = models.DateTimeField('time updated')
+
+    def __str__(self):
+        return self.species + ": " + str(self.score) + "\n"
