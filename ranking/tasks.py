@@ -9,7 +9,7 @@ logger = get_task_logger(__name__)
 
 '''Asynchronous periodic task for updating scores.'''
 
-@task()
+@task(name='ranking.tasks.update_scores')
 def update_scores():
     logger.info("Updating scores")
     score_dict = query_reddit.get_scores_from_parsed_json(query_reddit.get_hottest_posts(query_reddit.get_auth_token()))

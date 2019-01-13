@@ -128,6 +128,9 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Canada/Eastern'
+CELERY_IMPORTS = (
+    'ranking.tasks',
+)
 CELERY_BEAT_SCHEDULE = {
     'update_scores_task': {
         'task': 'ranking.tasks.update_scores',
