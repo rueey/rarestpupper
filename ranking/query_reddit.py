@@ -25,6 +25,8 @@ def get_auth_token():
     else:
         return None
 
+access_token = get_auth_token()
+
 '''get_hottest_posts(access_token) queries the reddit API for the 100 hottest posts'''
 
 def get_hottest_posts(access_token):
@@ -48,7 +50,7 @@ def get_scores_from_parsed_json(parsed_text):
     return ret
 
 def scoring_algo(upvotes, comments):
-    return (upvotes//max(comments, 1))+comments
+    return (upvotes//comments)+comments
 
 if __name__ == "__main__":
     print(get_scores_from_parsed_json(get_hottest_posts(get_auth_token())))

@@ -16,3 +16,5 @@ celerybeat-schedule
 dump.rdb
 db.sqlite3
 venv
+.vscode
+celerybeat.pid

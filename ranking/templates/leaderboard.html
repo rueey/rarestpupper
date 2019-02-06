@@ -1,9 +1,0 @@
-<h1>Rarest pupper</h1>
-
-{% if top_scoring_pupper_list %}
-    <ul>
-        {% for pupper in top_scoring_pupper_list %}
-        <li><p>{{ pupper.species }}: {{ pupper.score }}</p></li>
-        {% endfor %}
-    </ul>
-{% endif %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <header>
+        <title>The rarest puppers!</title>
+        <link rel="stylesheet" href={% static "css/scoreboard.css" %}>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src={% static "js/leaderboard.js" %}></script>
+    </header>
+    <body>
+        <div class="leaderboard">
+            <div class="title-container">
+                <img class="logo" src={% static "images/rarest_pupper.png"%}/>
+                <h1 class="title__main">rarestpupper</h1>
+            </div>
+            <div class="loader-5 center"><span></span></div>
+            <div class="bar-container">
+                <div id="bar--1" class="bar"><span class="bar__content"></span></div>
+                <div id="bar--2" class="bar"><span class="bar__content"></span></div>
+                <div id="bar--3" class="bar"><span class="bar__content"></span></div>
+                <div id="bar--4" class="bar"><span class="bar__content"></span></div>
+                <div id="bar--5" class="bar"><span class="bar__content"></span></div>
+            </div>
+            <p>Developed by Rui Li</p>
+        </div>
+    </body>
+</html>

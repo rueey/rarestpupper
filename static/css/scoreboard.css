@@ -1,0 +1,236 @@
+@font-face{
+    font-family: 'reddit';
+    src: url('../fonts/vagrounded/VAGRoundedStd-Thin.otf') format("opentype");
+}
+
+@font-face{
+    font-family: 'reddit-title';
+    src: url('../fonts/vagrounded/VAGRoundedBT-Regular.otf') format("opentype");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #d87093;
+    color: white;
+    font-family: 'reddit', sans-serif;
+}
+
+.title-container{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.logo{
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    margin: 5px;
+}
+
+.title__main{
+    font-family: 'reddit-title', sans-serif;
+    font-weight: normal;
+}
+
+.leaderboard{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.bar__content{
+    margin: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bar-container{
+    width: 50%;
+    display: none;
+    font-family: 'reddit', sans-serif;
+    color: #555;
+}
+
+.expanded-bar{
+    width: 100%;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-style: solid;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+#bar--5{
+    border-color: #f68087;
+    background-color: #f68087;
+    border-radius: 0px 15px 15px 15px;
+}
+
+#bar--4{
+    border-color: #ff9878;
+    background-color: #ff9878;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#bar--3{
+    border-color: #ffb56b;
+    background-color: #ffb56b;  
+    border-radius: 0px 15px 15px 0px;
+}
+
+#bar--2{
+    border-color: #ffd666;
+    background-color: #ffd666;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#bar--1{
+    border-color: #f9f871;
+    background-color: #f9f871;
+    border-radius: 15px 15px 15px 0px;
+}
+
+.show {
+    display: block;
+    height: auto;
+    overflow: visible;
+}
+
+/* Loader 5 from https://codepen.io/rbv912/pen/dYbqLQ*/
+.loader-5 {
+	height: 32px;
+	width: 32px;
+	-webkit-animation: loader-5-1 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+	        animation: loader-5-1 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+@-webkit-keyframes loader-5-1 {
+	0%   { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes loader-5-1 {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.loader-5::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	bottom: 0; right: auto;
+	margin: auto;
+	width: 8px;
+	height: 8px;
+	background: #FFF;
+	border-radius: 50%;
+	-webkit-animation: loader-5-2 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+	        animation: loader-5-2 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+@-webkit-keyframes loader-5-2 {
+	0%   { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+	50%  { -webkit-transform: translate3d(24px, 0, 0) scale(.5); }
+	100% { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes loader-5-2 {
+	0%   { transform: translate3d(0, 0, 0) scale(1); }
+	50%  { transform: translate3d(24px, 0, 0) scale(.5); }
+	100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+.loader-5::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; left: auto;
+	bottom: 0; right: 0;
+	margin: auto;
+	width: 8px;
+	height: 8px;
+	background: #FFF;
+	border-radius: 50%;
+	-webkit-animation: loader-5-3 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+	        animation: loader-5-3 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+@-webkit-keyframes loader-5-3 {
+	0%   { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+	50%  { -webkit-transform: translate3d(-24px, 0, 0) scale(.5); }
+	100% { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes loader-5-3 {
+	0%   { transform: translate3d(0, 0, 0) scale(1); }
+	50%  { transform: translate3d(-24px, 0, 0) scale(.5); }
+	100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+.loader-5 span {
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	bottom: 0; right: 0;
+	margin: auto;
+	height: 32px;
+	width: 32px;
+}
+.loader-5 span::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0; left: 0;
+	bottom: auto; right: 0;
+	margin: auto;
+	width: 8px;
+	height: 8px;
+	background: #FFF;
+	border-radius: 50%;
+	-webkit-animation: loader-5-4 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+	        animation: loader-5-4 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+@-webkit-keyframes loader-5-4 {
+	0%   { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+	50%  { -webkit-transform: translate3d(0, 24px, 0) scale(.5); }
+	100% { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes loader-5-4 {
+	0%   { transform: translate3d(0, 0, 0) scale(1); }
+	50%  { transform: translate3d(0, 24px, 0) scale(.5); }
+	100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+.loader-5 span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: auto; left: 0;
+	bottom: 0; right: 0;
+	margin: auto;
+	width: 8px;
+	height: 8px;
+	background: #FFF;
+	border-radius: 50%;
+	-webkit-animation: loader-5-5 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+	        animation: loader-5-5 2s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+@-webkit-keyframes loader-5-5 {
+	0%   { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+	50%  { -webkit-transform: translate3d(0, -24px, 0) scale(.5); }
+	100% { -webkit-transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes loader-5-5 {
+	0%   { transform: translate3d(0, 0, 0) scale(1); }
+	50%  { transform: translate3d(0, -24px, 0) scale(.5); }
+	100% { transform: translate3d(0, 0, 0) scale(1); }
+}
