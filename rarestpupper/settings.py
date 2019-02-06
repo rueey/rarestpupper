@@ -136,6 +136,6 @@ CELERY_IMPORTS = (
 CELERY_BEAT_SCHEDULE = {
     'update_scores_task': {
         'task': 'ranking.tasks.update_scores',
-        'schedule': crontab(minute='*/3'),
+        'schedule': crontab(minute='*/2'),
     },}
 CELERY_TRACK_STARTED = True

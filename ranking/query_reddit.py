@@ -50,7 +50,7 @@ def get_scores_from_parsed_json(parsed_text):
     return ret
 
 def scoring_algo(upvotes, comments):
-    return (upvotes//comments)+comments
+    return (upvotes//max(1, comments))+comments
 
 if __name__ == "__main__":
     print(get_scores_from_parsed_json(get_hottest_posts(get_auth_token())))
